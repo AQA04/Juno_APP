@@ -1,0 +1,44 @@
+:root {
+  /* Colors */
+  --color-bg-dark: #111111;
+  --color-bg-card: #ac7373;
+  --color-primary: #8A2BE2;
+  --color-secondary: #4B0082;
+  --color-accent: #ffd700;
+  --color-text-primary: #ececec;
+  --color-text-secondary: #B0B0B0;
+  --color-border: #333333;
+  --color-input-bg: rgba(255, 255, 255, 0.05);
+
+  /* Card Theme */
+  --card-bg: #171718;
+  --card-border: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.5);
+
+  /* Gradients */
+  --gradient-bg: linear-gradient(135deg, #06031f, #1a1552, #24243e);
+  --gradient-button: linear-gradient(90deg, #7F7FD5, #86A8E7, #0b423e);
+  /* Placeholder for purple gradient */
+  --gradient-button-primary: linear-gradient(90deg, #31065a, #4b0082);
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Typography */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-weight-bold: 700;
+
+  /* Borders */
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --border-radius-pill: 50px;
+}

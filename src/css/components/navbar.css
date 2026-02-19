@@ -1,0 +1,85 @@
+:root {
+    --navbar-height: 80px;
+    --navbar-bg: #171718;
+    --navbar-active-color: #ffffff;
+    --navbar-inactive-color: rgba(255, 255, 255, 0.5);
+    --navbar-border-top: 1px solid #333;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: var(--navbar-height);
+    background-color: var(--navbar-bg);
+    border-top: var(--navbar-border-top);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+    padding-bottom: env(safe-area-inset-bottom);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--navbar-inactive-color);
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex: 1;
+    height: 100%;
+    transition: color 0.3s ease, transform 0.2s ease;
+    gap: 4px;
+}
+
+.nav-item:hover {
+    color: var(--color-text-primary);
+}
+
+.nav-item.active {
+    color: var(--navbar-active-color);
+}
+
+.nav-item svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.3s ease;
+}
+
+.nav-label {
+    font-size: 10px;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+/* Dynamic color themes for navbar based on active section */
+.navbar.theme-expenses {
+    border-top-color: #ff6b6b;
+}
+
+.navbar.theme-funds {
+    border-top-color: #4ecdc4;
+}
+
+.navbar.theme-calculator {
+    border-top-color: #ffe66d;
+}
+
+.navbar.theme-wrapped {
+    border-top-color: #1a535c;
+}
+
+.navbar.theme-income {
+    border-top-color: #8A2BE2;
+}
