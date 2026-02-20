@@ -29,10 +29,7 @@ export function createCalculatorScreen() {
 
     // Header
     const header = document.createElement('h1');
-    header.className = 'text-center mb-lg';
-    header.style.color = 'white';
-    header.style.fontSize = '28px';
-    header.style.fontWeight = 'bold';
+    header.className = 'screen-title'; // Use standard class
     header.textContent = 'CALCULADORA';
     content.appendChild(header);
 

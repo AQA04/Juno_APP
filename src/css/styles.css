@@ -58,6 +58,16 @@ body {
 }
 
 /* Typography utilities */
+.screen-title {
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: var(--spacing-lg);
+    text-transform: uppercase;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
 .text-center {
     text-align: center;
 }

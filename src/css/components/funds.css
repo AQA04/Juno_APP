@@ -1,0 +1,208 @@
+/* Global screen adjustments */
+.screen-container {
+    background-color: var(--color-bg);
+}
+
+.funds-header {
+    background: transparent;
+    backdrop-filter: none;
+    border-bottom: none;
+}
+
+.funds-title {
+    color: white;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: var(--font-family-base);
+}
+
+.funds-scroll-container {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 120px;
+    scrollbar-width: none;
+}
+
+.funds-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.funds-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0 20px 20px;
+}
+
+.fund-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fund-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    width: 100%;
+    text-align: center;
+}
+
+.fund-card {
+    background: linear-gradient(145deg, rgba(30, 30, 35, 0.9), rgba(20, 20, 25, 0.9));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    width: 100%;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 15px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.fund-card.pressing {
+    transform: scale(0.95);
+    background: rgba(40, 40, 45, 0.9);
+}
+
+.fund-chart-container {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fund-chart-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+.fund-available {
+    font-size: 10px;
+    color: var(--color-text-secondary);
+    text-align: center;
+    line-height: 1.4;
+}
+
+.fund-available b {
+    display: block;
+    font-size: 13px;
+    color: white;
+    margin-top: 2px;
+}
+
+/* Larger Inputs */
+.fund-input-percentage {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    width: 90%;
+    max-width: 110px;
+    text-align: center;
+    padding: 10px 5px;
+    font-family: var(--font-family-base);
+    font-size: 14px;
+    font-weight: 900;
+    transition: all 0.2s;
+}
+
+.fund-input-percentage:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--color-primary);
+}
+
+/* Switch Styling */
+.switch {
+    width: 50px;
+    height: 26px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 13px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.switch .handle {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7c5cb7;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.switch.on .handle {
+    left: 26px;
+}
+
+/* Internal symbols for handle */
+.switch .handle::after {
+    content: attr(data-label);
+}
+
+/* Circular FAB */
+.btn-fab-create {
+    width: 42px;
+    height: 42px;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg, #b194d9, #7c5cb7);
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(124, 92, 183, 0.4);
+    transition: all 0.2s;
+}
+
+.btn-fab-create svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Delete Overlay */
+.delete-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 77, 77, 0.92);
+    backdrop-filter: blur(4px);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

@@ -12,19 +12,10 @@ export function createIncomeScreen() {
     content.className = 'screen-content';
     container.appendChild(content);
 
-    // Title modified to be tighter
+    // Standardized Title
     const title = document.createElement('h1');
     title.innerText = 'INGRESOS';
-    title.className = 'text-center';
-    title.style.cssText = `
-        font-size: 1.5rem; /* Smaller title */
-        font-weight: 900;
-        letter-spacing: 1px;
-        margin-bottom: var(--spacing-md);
-        text-transform: uppercase;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-        flex-shrink: 0;
-    `;
+    title.className = 'screen-title';
 
     // Form Container (Card-like)
     const form = document.createElement('div');
@@ -38,12 +29,12 @@ export function createIncomeScreen() {
     `;
 
     // 1. Ingreso Neto Input
-    const salaryInput = createInput({
+    const incomeInput = createInput({
         label: 'Ingreso neto',
         type: 'money',
         value: savedData.net || '',
         placeholder: "1'000'000",
-        id: 'salary',
+        id: 'income',
         onInput: (e) => {
             let value = e.target.value.replace(/[^0-9]/g, '');
             if (value) {
@@ -102,14 +93,15 @@ export function createIncomeScreen() {
     const saveBtn = createButton({
         text: '',
         onClick: () => {
-            // Save data to store
-            const net = salaryInput.querySelector('input').value;
+            // BACKEND SIMULATION: Save to store
+            const net = incomeInput.querySelector('input').value;
             const hours = hoursInput.querySelector('input').value;
             const days = daysInput.querySelector('input').value;
             const frequency = frequencySelect.querySelector('select').value;
 
             store.setIncomeData({ net, hours, days, frequency });
 
+            // Visual feedback
             const btn = document.querySelector('.btn-primary');
             const originalContent = btn.innerHTML;
             btn.innerHTML = '<span>✓</span> Guardado';
@@ -131,7 +123,7 @@ export function createIncomeScreen() {
     saveBtn.style.alignItems = 'center';
     saveBtn.style.marginTop = 'var(--spacing-lg)'; // Fixed margin instead of auto
 
-    form.appendChild(salaryInput);
+    form.appendChild(incomeInput);
     form.appendChild(timesRow);
     form.appendChild(frequencySelect);
     form.appendChild(saveBtn);
