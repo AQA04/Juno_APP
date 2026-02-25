@@ -156,7 +156,7 @@ export function createExpensesScreen() {
                         </div>
                         <div class="expenses-input-container">
                             <select class="expenses-field expenses-select" id="expense-fund">
-                                <option value="" disabled selected>fondo</option>
+                                <option value="" disabled selected>Fondo</option>
                                 ${store.getFunds().map(f => `<option value="${f.id}">${f.title}</option>`).join('')}
                             </select>
                         </div>
@@ -301,7 +301,7 @@ export function createExpensesScreen() {
 
         // Update dropdown options
         fundSelect.innerHTML = `
-            <option value="" disabled ${!currentFundId ? 'selected' : ''}>fondo</option>
+            <option value="" disabled ${!currentFundId ? 'selected' : ''}>Fondo</option>
             ${store.getFunds().map(f => `<option value="${f.id}" ${f.id === currentFundId ? 'selected' : ''}>${f.title}</option>`).join('')}
         `;
 

@@ -77,16 +77,19 @@ export function createIncomeScreen() {
     timesRow.appendChild(hoursInput);
     timesRow.appendChild(daysInput);
 
-    // Selector
+    // Selector — persiste inmediatamente al cambiar
     const frequencySelect = createSelect({
-        label: 'Frecuencia', // Shortened label
+        label: 'Frecuencia',
         id: 'frequency',
         value: savedData.frequency || 'quincenal',
         options: [
             { value: 'quincenal', label: 'Quincenal' },
             { value: 'mensual', label: 'Mensual' },
             { value: 'trimestral', label: 'Trimestral' }
-        ]
+        ],
+        onChange: (e) => {
+            store.setIncomeData({ frequency: e.target.value });
+        }
     });
 
     // Button with Icon
