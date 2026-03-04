@@ -20,13 +20,6 @@ export function createIncomeScreen() {
     // Form Container (Card-like)
     const form = document.createElement('div');
     form.className = 'card';
-    // Use flex properties to make the card take available space but NOT overflow
-    form.style.cssText = `
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: var(--spacing-md);
-    `;
 
     // 1. Ingreso Neto Input
     const incomeInput = createInput({

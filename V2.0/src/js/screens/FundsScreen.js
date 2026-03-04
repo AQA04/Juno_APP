@@ -38,7 +38,7 @@ export function createFundsScreen() {
                 </div>
             </div>
             
-            <h1 class="screen-title" style="flex: 1; margin: 0; text-align: center;">FONDOS</h1>
+            <h1 class="screen-title">FONDOS</h1>
             
             <div class="fab-wrapper" style="width: 60px; display: flex; justify-content: flex-end;">
                 <button class="btn-fab-create" id="btn-add-fund" style="position: static; transform: none;">

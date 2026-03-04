@@ -16,10 +16,11 @@
   --card-shadow-premium: 0 10px 40px rgba(0, 0, 0, 0.4);
   --card-border-radius-premium: 24px;
 
-  /* Legacy Card Theme - Updating to match premium */
+  /* Card Theme - Consolidated Premium Design */
   --card-bg: var(--card-bg-premium);
-  --card-border: rgba(255, 255, 255, 0.1);
-  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  --card-border: var(--card-border-premium);
+  --card-shadow: var(--card-shadow-premium);
+  --card-border-radius: var(--card-border-radius-premium);
 
   /* Gradients */
   --gradient-bg: linear-gradient(135deg, #06031f, #1a1552, #24243e);
@@ -45,6 +46,6 @@
   /* Borders */
   --border-radius-sm: 8px;
   --border-radius-md: 12px;
-  --border-radius-lg: 20px;
+  --border-radius-lg: 24px;
   --border-radius-pill: 50px;
 }

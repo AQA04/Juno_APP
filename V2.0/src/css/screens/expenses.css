@@ -7,14 +7,16 @@
 }
 
 .expenses-card {
-    background: linear-gradient(145deg, rgba(30, 30, 35, 0.9), rgba(20, 20, 25, 0.9));
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 24px;
+    background: var(--card-bg);
+    border: var(--card-border);
+    border-radius: var(--card-border-radius);
     padding: var(--spacing-lg);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--card-shadow);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .expenses-inputs-row {
@@ -95,15 +97,17 @@
 }
 
 .history-card {
-    background: linear-gradient(145deg, rgba(30, 30, 35, 0.9), rgba(20, 20, 25, 0.9));
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 24px;
+    background: var(--card-bg);
+    border: var(--card-border);
+    border-radius: var(--card-border-radius);
     min-height: 120px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--card-shadow);
     padding: var(--spacing-md);
     display: flex;
     flex-direction: column;
     gap: 12px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .char-counter {
