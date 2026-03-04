@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juno - Ingresos</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/logoJuno.svg">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./src/css/variables.css">
+  <link rel="stylesheet" href="./src/css/components/navbar.css">
+  <link rel="stylesheet" href="./src/css/components/funds.css">
+  <link rel="stylesheet" href="./src/css/components/calculator.css">
+  <link rel="stylesheet" href="./src/css/screens/expenses.css">
+  <link rel="stylesheet" href="./src/css/styles.css">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => { });
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- App content will be injected here -->
+  </div>
+  <script type="module" src="./src/js/app.js"></script>
+</body>
+
+</html>
