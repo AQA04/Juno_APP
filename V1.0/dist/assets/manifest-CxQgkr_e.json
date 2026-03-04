@@ -1,0 +1,16 @@
+{
+    "name": "JUNO Finance",
+    "short_name": "JUNO",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#171718",
+    "theme_color": "#171718",
+    "icons": [
+        {
+            "src": "assets/logoJuno.svg",
+            "sizes": "192x192 512x512",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}
